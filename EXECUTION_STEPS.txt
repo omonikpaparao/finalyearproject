@@ -25,7 +25,7 @@ http://localhost:5001
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 In recommendation_api.py:
-  • GEMINI_API_KEY = "AIzaSyBc0Hx7j95RkGJkCJlj3JTW1UE0qUp2tqw"
+  • GEMINI_API_KEY = ""
   • MAX_FEATURES_DISPLAY = 100 (shows all 95 features to Gemini)
   • MONGO_URI = "mongodb+srv://v647414:223344vinay@cluster0.lus5rot.mongodb.net/"
 
@@ -240,3 +240,4 @@ Read these files:
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                         HAPPY SHOPPING! 🛍️🤖                                ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
