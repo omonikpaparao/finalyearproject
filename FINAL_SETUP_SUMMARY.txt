@@ -8,7 +8,7 @@
 
 1. Gemini API Key: ✅ CONFIGURED
    Location: recommendation_api.py (line 11)
-   Key: AIzaSyBc0Hx7j95RkGJkCJlj3JTW1UE0qUp2tqw
+   Key: 
    Status: Ready to use
 
 2. API URL: ✅ CONFIGURED
@@ -320,3 +320,4 @@ Reference:
 ║                                                                              ║
 ║                    Happy Shopping with AI! 🛍️🤖                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
