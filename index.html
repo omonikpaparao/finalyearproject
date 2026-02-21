@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DeLux Mart | Home</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* Enhanced Hero Section */
+    .hero {
+      /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('/images/aboutbackground.jpg') center/cover;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    }
+    
+    .features-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .features-intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .feature-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .feature-content {
+      padding: 1.5rem;
+    }
+    
+    .feature-content h3 {
+      color: #667eea;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    .feature-content p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+    
+    /* Why Choose Us Section */
+    .why-choose-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .why-choose-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .benefit-item {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .benefit-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    .benefit-item p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    
+    /* Enhanced Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 3rem 2rem 1.5rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .footer-section p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.2rem;
+      background: rgba(102, 126, 234, 0.2);
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+    }
+    
+    .social-link:hover {
+      background: #667eea;
+      transform: translateY(-3px);
+    }
+    
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      font-size: 1.5rem;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.8;
+    }
+    
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/Logo1.png" height="45px" width="50px">
+    <div class="logo">DeLux Mart</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/cart" id="cartLink">Cart</a></li>
+        <li><a href="/orders" id="ordersLink">Orders</a></li>
+        <li><a href="/seller-login" id="sellerLoginLink">Seller Login</a></li>
+        <li><a href="/loginpage" id="loginLink">Login</a></li>
+        <li><a href="#" id="logoutLink" style="display: none;">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🛍️ Discover Your Perfect Phone</h1>
+      <p>Experience the best Mobile Shopping</p>
+      <h4>Shop premium smartphones at unbeatable prices with amazing deals!</h4>
+      <br>
+      <a href="/products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section with Images -->
+  <section class="features-section">
+    <h2>📱 Why Smartphones Matter</h2>
+    <div class="features-intro">
+      <p>In today's connected world, your smartphone is more than just a device—it's your gateway to endless possibilities. 
+      From staying connected with loved ones to managing your business on the go, the right phone empowers you to do more. 
+      At DeLux Mart, we understand that choosing the perfect smartphone is crucial, which is why we offer cutting-edge 
+      PRUS-powered recommendations to help you find exactly what you need.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="/images/pic1.png" alt="Latest Technology">
+        <div class="feature-content">
+          <h3>⚡ Trending Mobiles</h3>
+          <p>Discover the newest smartphones with cutting-edge features, powerful processors, and stunning displays. 
+          Stay ahead with the latest innovations in mobile technology.</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <img src="/images/pic2.png" alt="PRUS Powered Search">
+        <div class="feature-content">
+          <h3>🤖 PRUS Powered Search</h3>
+          <p>Our revolutionary PRUS recommendation system analyzes thousands of reviews to help you find the perfect phone. 
+          Simply describe what you want in natural language, and let AI do the rest!</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <img src="/images/pic3.png" alt="Best Prices">
+        <div class="feature-content">
+          <h3>💰 Unbeatable Prices</h3>
+          <p>Get premium smartphones at the most competitive prices. We guarantee the best deals, exclusive offers, 
+          and amazing discounts on top brands.</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <img src="/images/pic4.png" alt="Trusted Quality">
+        <div class="feature-content">
+          <h3>✨ Trusted Quality</h3>
+          <p>Every phone is carefully selected and verified for authenticity. Shop with confidence knowing you're getting 
+          genuine products with full warranty and support.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="/images/pic6.png" alt="Best Prices">
+        <div class="feature-content">
+          <h3> 🚚 Best Delivery  </h3>
+          <p>No hidden fees, no long windows—just simple, honest service. Revolutionizing the way your neighborhood moves.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="/images/pic5.png" alt="Best Prices">
+        <div class="feature-content">
+          <h3>📞 24/7 Customer Support</h3>
+          <p>We provide 24/7 Customer Care Service. You can Mail your doubts, suggestions, complaints etc.. Our Team will respond immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose DeLux Mart -->
+  <section class="why-choose-section">
+    <h2>Why Choose DeLux Mart?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <h3>Smart Recommendations</h3>
+        <p>AI-powered suggestions based on real customer reviews and your preferences</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <h3>Multi-Language Support</h3>
+        <p>Shop in your language - English, Telugu, Tamil, or Hindi</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon">🔒</div>
+        <h3>Secure Shopping</h3>
+        <p>Your data is protected with industry-standard security measures</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and reliable shipping to your doorstep</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="products">
+    <h2>📍 Visit Us & Connect</h2>
+    <div class="product-grid">
+      <!-- Office Location -->
+      <div class="product-card">
+        <h3>Our Office Address</h3>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.325771478546!2d80.3214493743636!3d16.255065734437732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a76e740000001%3A0xc41c8498715c6da0!2sR.V.R.%20%26%20J.C.College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1754268553879!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Happy Shopping -->
+      <div class="product-card">
+        <img src="/images/happyshopping.jpeg" alt="Happy Shopping" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+        <h3>Thank You For Visiting! 😊</h3>
+        <p style="color: #666; padding: 1rem;">We're committed to providing you with the best shopping experience. 
+        Your satisfaction is our priority!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h3>About DeLux Mart</h3>
+        <p>Your trusted destination for premium smartphones with AI-powered recommendations. 
+        We make phone shopping smarter, easier, and more personalized.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="/products" style="color: white; text-decoration: none;">Products</a></p>
+        <p><a href="/about" style="color: white; text-decoration: none;">About Us</a></p>
+        <p><a href="/cart" style="color: white; text-decoration: none;">Shopping Cart</a></p>
+        <p><a href="/orders" style="color: white; text-decoration: none;">My Orders</a></p>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/rvrjcce.official/" target="_blank" class="social-link">
+            <span class="social-icon">📘</span>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/rvrjcce.official/?hl=en" target="_blank" class="social-link">
+            <span class="social-icon">📷</span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://x.com/rvrjc_official?lang=en" target="_blank" class="social-link">
+            <span class="social-icon">🐦</span>
+            <span>Twitter</span>
+          </a>
+          <a href="https://www.youtube.com/c/RVRJCCollegeofEngineering" target="_blank" class="social-link">
+            <span class="social-icon">📺</span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 DeLux Mart. All rights reserved. | Powered by DeLux Mart Team </p>
+    </div>
+  </footer>
+
+  <script>
+    // Check authentication status and update navigation
+    function updateNavigation() {
+      const userEmail = localStorage.getItem('userEmail');
+      const loginLink = document.getElementById('loginLink');
+      const logoutLink = document.getElementById('logoutLink');
+      
+      if (userEmail) {
+        // User is logged in
+        loginLink.style.display = 'none';
+        logoutLink.style.display = 'inline';
+      } else {
+        // User is not logged in
+        loginLink.style.display = 'inline';
+        logoutLink.style.display = 'none';
+      }
+    }
+
+    // Logout functionality
+    document.getElementById('logoutLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.removeItem('userEmail');
+      localStorage.removeItem('userName');
+      updateNavigation();
+      window.location.href = '/';
+    });
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateNavigation();
+    });
+  </script>
+</body>
+</html>
