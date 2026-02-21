@@ -26,7 +26,7 @@ Changes Made:
    ❌ from config import *
 
 2. Added configuration constants directly in recommendation_api.py:
-   ✅ GEMINI_API_KEY = "AIzaSyBc0Hx7j95RkGJkCJlj3JTW1UE0qUp2tqw"
+   ✅ GEMINI_API_KEY = ""
    ✅ MAX_FEATURES_DISPLAY = 100
    ✅ MONGO_URI = "mongodb+srv://v647414:223344vinay@cluster0.lus5rot.mongodb.net/"
 
@@ -92,3 +92,4 @@ Without any errors.
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                            FIX COMPLETE! ✅                                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
