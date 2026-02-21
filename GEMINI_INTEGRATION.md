@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ### 2. API Key
 The Gemini API key is already configured in `recommendation_api.py`:
 ```python
-GEMINI_API_KEY = "AIzaSyBc0Hx7j95RkGJkCJlj3JTW1UE0qUp2tqw"
+GEMINI_API_KEY = 
 ```
 
 ### 3. Run the API
@@ -99,3 +99,4 @@ The system validates against 95 features extracted from `mobile_features.txt`, i
 - If Gemini API fails, falls back to simple keyword matching
 - If no valid features found, returns helpful error message
 - All errors are logged for debugging
+
